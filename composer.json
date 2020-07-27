@@ -1,0 +1,20 @@
+{
+    "name": "svitsoft/google-sheets-connector",
+    "authors": [
+        {
+            "name": "Chameleon",
+            "email": "chameleon2die4@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Connector\\": "inc/classes/"
+        }
+    },
+    "require": {
+        "asimlqt/php-google-spreadsheet-client": "^3.0",
+        "google/apiclient": "^2.2",
+        "haydenpierce/class-finder": "^0.3.3",
+        "filp/whoops": "^2.5"
+    }
+}
