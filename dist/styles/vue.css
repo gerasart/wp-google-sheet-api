@@ -1,6 +1,9 @@
 .google-api .page-inner .auth-link[data-v-dc950584] {
   display: inline-block;
   margin-bottom: 16px;
+  padding: 5px 10px;
+  background: olive;
+  color: white;
 }
 .google-api .page-inner .api-submit[data-v-dc950584] {
   margin-top: 16px;

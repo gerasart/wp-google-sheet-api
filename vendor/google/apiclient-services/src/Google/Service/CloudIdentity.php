@@ -36,6 +36,9 @@ class Google_Service_CloudIdentity extends Google_Service
   /** See any Cloud Identity Groups that you can access, including group members and their emails. */
   const CLOUD_IDENTITY_GROUPS_READONLY =
       "https://www.googleapis.com/auth/cloud-identity.groups.readonly";
+  /** View and manage your data across Google Cloud Platform services. */
+  const CLOUD_PLATFORM =
+      "https://www.googleapis.com/auth/cloud-platform";
 
   public $groups;
   public $groups_memberships;
@@ -93,10 +96,6 @@ class Google_Service_CloudIdentity extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'view' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -104,6 +103,10 @@ class Google_Service_CloudIdentity extends Google_Service
                 'parent' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'lookup' => array(
@@ -141,10 +144,6 @@ class Google_Service_CloudIdentity extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'query' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -152,6 +151,10 @@ class Google_Service_CloudIdentity extends Google_Service
                 'view' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -203,15 +206,15 @@ class Google_Service_CloudIdentity extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
                 'view' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

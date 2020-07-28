@@ -22,6 +22,7 @@ class Google_Service_CloudAsset_Asset extends Google_Collection
   protected $accessLevelDataType = '';
   protected $accessPolicyType = 'Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1AccessPolicy';
   protected $accessPolicyDataType = '';
+  public $ancestors;
   public $assetType;
   protected $iamPolicyType = 'Google_Service_CloudAsset_Policy';
   protected $iamPolicyDataType = '';
@@ -32,6 +33,7 @@ class Google_Service_CloudAsset_Asset extends Google_Collection
   protected $resourceDataType = '';
   protected $servicePerimeterType = 'Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerimeter';
   protected $servicePerimeterDataType = '';
+  public $updateTime;
 
   /**
    * @param Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1AccessLevel
@@ -60,6 +62,14 @@ class Google_Service_CloudAsset_Asset extends Google_Collection
   public function getAccessPolicy()
   {
     return $this->accessPolicy;
+  }
+  public function setAncestors($ancestors)
+  {
+    $this->ancestors = $ancestors;
+  }
+  public function getAncestors()
+  {
+    return $this->ancestors;
   }
   public function setAssetType($assetType)
   {
@@ -132,5 +142,13 @@ class Google_Service_CloudAsset_Asset extends Google_Collection
   public function getServicePerimeter()
   {
     return $this->servicePerimeter;
+  }
+  public function setUpdateTime($updateTime)
+  {
+    $this->updateTime = $updateTime;
+  }
+  public function getUpdateTime()
+  {
+    return $this->updateTime;
   }
 }

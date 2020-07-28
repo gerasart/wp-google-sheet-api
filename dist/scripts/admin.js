@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/wp-app\\wp-content\\plugins\\google-sheets-connector\\dist/";
+/******/ 	__webpack_require__.p = "/wp-content\\plugins\\google-sheets-connector\\dist/";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -119,8 +119,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\wamp\www\services\wp-app\wp-content\plugins\google-sheets-connector\inc/scripts/main.js */"./inc/scripts/main.js");
-module.exports = __webpack_require__(/*! D:\wamp\www\services\wp-app\wp-content\plugins\google-sheets-connector\inc/styles/main.scss */"./inc/styles/main.scss");
+__webpack_require__(/*! D:\wamp\www\newjustice.org.ua\wp-content\plugins\google-sheets-connector\inc/scripts/main.js */"./inc/scripts/main.js");
+module.exports = __webpack_require__(/*! D:\wamp\www\newjustice.org.ua\wp-content\plugins\google-sheets-connector\inc/styles/main.scss */"./inc/styles/main.scss");
 
 
 /***/ })

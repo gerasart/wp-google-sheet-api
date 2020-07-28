@@ -27,6 +27,8 @@ class Google_Service_CloudSearch_Resource_DebugIdentitysourcesUnmappedids extend
 {
   /**
    * Lists unmapped user identities for an identity source.
+   *
+   * **Note:** This API requires an admin account to execute.
    * (unmappedids.listDebugIdentitysourcesUnmappedids)
    *
    * @param string $parent The name of the identity source, in the following

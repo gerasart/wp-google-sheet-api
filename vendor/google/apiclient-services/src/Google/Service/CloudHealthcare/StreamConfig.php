@@ -18,19 +18,19 @@
 class Google_Service_CloudHealthcare_StreamConfig extends Google_Collection
 {
   protected $collection_key = 'resourceTypes';
-  protected $bigqueryDestinationType = 'Google_Service_CloudHealthcare_GoogleCloudHealthcareV1alpha2FhirBigQueryDestination';
+  protected $bigqueryDestinationType = 'Google_Service_CloudHealthcare_GoogleCloudHealthcareV1FhirBigQueryDestination';
   protected $bigqueryDestinationDataType = '';
   public $resourceTypes;
 
   /**
-   * @param Google_Service_CloudHealthcare_GoogleCloudHealthcareV1alpha2FhirBigQueryDestination
+   * @param Google_Service_CloudHealthcare_GoogleCloudHealthcareV1FhirBigQueryDestination
    */
-  public function setBigqueryDestination(Google_Service_CloudHealthcare_GoogleCloudHealthcareV1alpha2FhirBigQueryDestination $bigqueryDestination)
+  public function setBigqueryDestination(Google_Service_CloudHealthcare_GoogleCloudHealthcareV1FhirBigQueryDestination $bigqueryDestination)
   {
     $this->bigqueryDestination = $bigqueryDestination;
   }
   /**
-   * @return Google_Service_CloudHealthcare_GoogleCloudHealthcareV1alpha2FhirBigQueryDestination
+   * @return Google_Service_CloudHealthcare_GoogleCloudHealthcareV1FhirBigQueryDestination
    */
   public function getBigqueryDestination()
   {

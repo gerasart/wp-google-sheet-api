@@ -20,6 +20,7 @@ class Google_Service_CloudKMS_PublicKey extends Google_Model
   public $algorithm;
   public $name;
   public $pem;
+  public $pemCrc32c;
 
   public function setAlgorithm($algorithm)
   {
@@ -44,5 +45,13 @@ class Google_Service_CloudKMS_PublicKey extends Google_Model
   public function getPem()
   {
     return $this->pem;
+  }
+  public function setPemCrc32c($pemCrc32c)
+  {
+    $this->pemCrc32c = $pemCrc32c;
+  }
+  public function getPemCrc32c()
+  {
+    return $this->pemCrc32c;
   }
 }

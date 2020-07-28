@@ -25,16 +25,22 @@ class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta
   protected $frameLabelAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1LabelAnnotation';
   protected $frameLabelAnnotationsDataType = 'array';
   public $inputUri;
+  protected $logoRecognitionAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1LogoRecognitionAnnotation';
+  protected $logoRecognitionAnnotationsDataType = 'array';
   protected $objectAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1ObjectTrackingAnnotation';
   protected $objectAnnotationsDataType = 'array';
   protected $segmentType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1VideoSegment';
   protected $segmentDataType = '';
   protected $segmentLabelAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1LabelAnnotation';
   protected $segmentLabelAnnotationsDataType = 'array';
+  protected $segmentPresenceLabelAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1LabelAnnotation';
+  protected $segmentPresenceLabelAnnotationsDataType = 'array';
   protected $shotAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1VideoSegment';
   protected $shotAnnotationsDataType = 'array';
   protected $shotLabelAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1LabelAnnotation';
   protected $shotLabelAnnotationsDataType = 'array';
+  protected $shotPresenceLabelAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1LabelAnnotation';
+  protected $shotPresenceLabelAnnotationsDataType = 'array';
   protected $speechTranscriptionsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1SpeechTranscription';
   protected $speechTranscriptionsDataType = 'array';
   protected $textAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1TextAnnotation';
@@ -91,6 +97,20 @@ class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta
     return $this->inputUri;
   }
   /**
+   * @param Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1LogoRecognitionAnnotation
+   */
+  public function setLogoRecognitionAnnotations($logoRecognitionAnnotations)
+  {
+    $this->logoRecognitionAnnotations = $logoRecognitionAnnotations;
+  }
+  /**
+   * @return Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1LogoRecognitionAnnotation
+   */
+  public function getLogoRecognitionAnnotations()
+  {
+    return $this->logoRecognitionAnnotations;
+  }
+  /**
    * @param Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1ObjectTrackingAnnotation
    */
   public function setObjectAnnotations($objectAnnotations)
@@ -133,6 +153,20 @@ class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta
     return $this->segmentLabelAnnotations;
   }
   /**
+   * @param Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1LabelAnnotation
+   */
+  public function setSegmentPresenceLabelAnnotations($segmentPresenceLabelAnnotations)
+  {
+    $this->segmentPresenceLabelAnnotations = $segmentPresenceLabelAnnotations;
+  }
+  /**
+   * @return Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1LabelAnnotation
+   */
+  public function getSegmentPresenceLabelAnnotations()
+  {
+    return $this->segmentPresenceLabelAnnotations;
+  }
+  /**
    * @param Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1VideoSegment
    */
   public function setShotAnnotations($shotAnnotations)
@@ -159,6 +193,20 @@ class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta
   public function getShotLabelAnnotations()
   {
     return $this->shotLabelAnnotations;
+  }
+  /**
+   * @param Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1LabelAnnotation
+   */
+  public function setShotPresenceLabelAnnotations($shotPresenceLabelAnnotations)
+  {
+    $this->shotPresenceLabelAnnotations = $shotPresenceLabelAnnotations;
+  }
+  /**
+   * @return Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1LabelAnnotation
+   */
+  public function getShotPresenceLabelAnnotations()
+  {
+    return $this->shotPresenceLabelAnnotations;
   }
   /**
    * @param Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p1beta1SpeechTranscription

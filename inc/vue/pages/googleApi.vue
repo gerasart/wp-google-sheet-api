@@ -7,35 +7,40 @@
 
                 <template v-if="token">
                     <h4>{{ 'Токен существует' }}</h4>
+                    <a href="#" @click.prevent="token = false">Создать новый</a>
                 </template>
 
                 <div v-else>
                     <a :href="authUrl" target="_blank" class="auth-link">{{ 'Авторизоваться' }}</a>
                     <div>
-                        <input class="mb10" type="text" size="60" name="google-api" v-model="models.token"
+                        <input class="mb10" type="text" size="60"  v-model="models.token"
                                placeholder="Token" />
                     </div>
                 </div>
 
                 <div>
-                    <input class="mb10" type="text" size="60" name="google-api" v-model="models.sheetId"
+                    <input class="mb10" type="text" size="60"  v-model="models.sheetId"
                            placeholder="Sheet Id" />
                 </div>
 
                 <div>
-                    <input class="mb10" type="text" size="60" name="google-api" v-model="models.tabName"
+                    <input class="mb10" type="text" size="60" v-model="models.tabName"
                            placeholder="Tab Name" />
+                </div>
+                <div>
+                    <input class="mb10" type="text" size="60"  v-model="models.form_id"
+                           placeholder="Contact Form id" />
                 </div>
 
                 <div class="columns">
-                    <div class="title">Google doc columns</div>
+                    <div class="title">Добавить поле</div>
                     <div class="button button-primary add" @click="add">add</div>
                     <table>
                         <thead>
                         <tr>
-                            <th>key</th>
-                            <th>value</th>
-                            <th>remove</th>
+                            <th>Имя поля (Латиница)</th>
+                            <th>Id acf поля</th>
+                            <th>удалить</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -81,6 +86,7 @@
                     sheetId: connector.sheetId,
                     tabName: connector.tabName,
                     columns: connector.columns || [],
+                    form_id: connector.form_id || [],
                 }
             }
         },
@@ -123,6 +129,9 @@
             .auth-link {
                 display: inline-block;
                 margin-bottom: 16px;
+                padding: 5px 10px;
+                background: olive;
+                color: white;
             }
 
             .api-submit {

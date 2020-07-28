@@ -76,8 +76,18 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsJobs extends Go
    * @param array $optParams Optional parameters.
    *
    * @opt_param int options.requestedPolicyVersion Optional. The policy format
-   * version to be returned. Acceptable values are 0, 1, and 3. If the value is 0,
-   * or the field is omitted, policy format version 1 will be returned.
+   * version to be returned.
+   *
+   * Valid values are 0, 1, and 3. Requests specifying an invalid value will be
+   * rejected.
+   *
+   * Requests for policies with any conditional bindings must specify version 3.
+   * Policies without any conditional bindings may specify any valid value or
+   * leave the field unset.
+   *
+   * To learn which resources support conditions in their IAM policies, see the
+   * [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-
+   * policies).
    * @return Google_Service_CloudMachineLearningEngine_GoogleIamV1Policy
    */
   public function getIamPolicy($resource, $optParams = array())
@@ -96,16 +106,16 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsJobs extends Go
    * jobs.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Optional. A page token to request the next page
-   * of results.
-   *
-   * You get the token from the `next_page_token` field of the response from the
-   * previous call.
    * @opt_param int pageSize Optional. The number of jobs to retrieve per "page"
    * of results. If there are more remaining results than this number, the
    * response message will contain a valid value in the `next_page_token` field.
    *
    * The default value is 20, and the maximum page size is 100.
+   * @opt_param string pageToken Optional. A page token to request the next page
+   * of results.
+   *
+   * You get the token from the `next_page_token` field of the response from the
+   * previous call.
    * @opt_param string filter Optional. Specifies the subset of jobs to retrieve.
    * You can filter on the value of one or more attributes of the job object. For
    * example, retrieve jobs with a job identifier that starts with 'census':
@@ -153,7 +163,10 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsJobs extends Go
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any
-   * existing policy. (jobs.setIamPolicy)
+   * existing policy.
+   *
+   * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+   * (jobs.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * specified. See the operation documentation for the appropriate value for this
@@ -171,7 +184,7 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsJobs extends Go
   /**
    * Returns permissions that a caller has on the specified resource. If the
    * resource does not exist, this will return an empty set of permissions, not a
-   * NOT_FOUND error.
+   * `NOT_FOUND` error.
    *
    * Note: This operation is designed to be used for building permission-aware UIs
    * and command-line tools, not for authorization checking. This operation may

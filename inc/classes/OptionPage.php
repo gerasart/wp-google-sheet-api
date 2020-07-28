@@ -39,6 +39,7 @@ class OptionPage {
             'sheetId'    => isset( $options['sheetId'] ) ? $options['sheetId'] : '',
             'tabName'    => isset( $options['tabName'] ) ? $options['tabName'] : '',
             'columns'    => isset( $options['columns'] ) ? $options['columns'] : '',
+            'form_id'    => isset( $options['form_id'] ) ? $options['form_id'] : '',
         ];
 
         wp_enqueue_script( 'vuescript' );

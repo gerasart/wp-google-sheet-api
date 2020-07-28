@@ -26,6 +26,25 @@
 class Google_Service_Spanner_Resource_ProjectsInstancesDatabasesSessions extends Google_Service_Resource
 {
   /**
+   * Creates multiple new sessions.
+   *
+   * This API can be used to initialize a session cache on the clients. See
+   * https://goo.gl/TgSFN2 for best practices on session cache management.
+   * (sessions.batchCreate)
+   *
+   * @param string $database Required. The database in which the new sessions are
+   * created.
+   * @param Google_Service_Spanner_BatchCreateSessionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Spanner_BatchCreateSessionsResponse
+   */
+  public function batchCreate($database, Google_Service_Spanner_BatchCreateSessionsRequest $postBody, $optParams = array())
+  {
+    $params = array('database' => $database, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('batchCreate', array($params), "Google_Service_Spanner_BatchCreateSessionsResponse");
+  }
+  /**
    * Begins a new transaction. This step can often be skipped: Read, ExecuteSql
    * and Commit can begin a new transaction as a side-effect.
    * (sessions.beginTransaction)
@@ -49,7 +68,13 @@ class Google_Service_Spanner_Resource_ProjectsInstancesDatabasesSessions extends
    * commonly, the cause is conflicts with concurrent transactions. However, it
    * can also happen for a variety of other reasons. If `Commit` returns
    * `ABORTED`, the caller should re-attempt the transaction from the beginning,
-   * re-using the same session. (sessions.commit)
+   * re-using the same session.
+   *
+   * On very rare occasions, `Commit` might return `UNKNOWN`. This can happen, for
+   * example, if the client job experiences a 1+ hour networking failure. At that
+   * point, Cloud Spanner has lost track of the transaction outcome and we
+   * recommend that you perform another read from the database to see the state of
+   * things as they are now. (sessions.commit)
    *
    * @param string $session Required. The session in which the transaction to be
    * committed is running.
@@ -75,7 +100,7 @@ class Google_Service_Spanner_Resource_ProjectsInstancesDatabasesSessions extends
    *
    * Active sessions use additional server resources, so it is a good idea to
    * delete idle and unneeded sessions. Aside from explicit deletes, Cloud Spanner
-   * can delete sessions for which no operations are sent for more than an hour.
+   * may delete sessions for which no operations are sent for more than an hour.
    * If a session is deleted, requests to it return `NOT_FOUND`.
    *
    * Idle sessions can be kept alive by sending a trivial SQL query periodically,

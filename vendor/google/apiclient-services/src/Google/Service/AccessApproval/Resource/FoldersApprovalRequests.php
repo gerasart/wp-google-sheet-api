@@ -97,7 +97,7 @@ class Google_Service_AccessApproval_Resource_FoldersApprovalRequests extends Goo
    *   [not set]: Requests that are pending or have active approvals.   ALL: All
    * requests.   PENDING: Only pending requests.   ACTIVE: Only active (i.e.
    * currently approved) requests.   DISMISSED: Only dismissed (including expired)
-   * requests.
+   * requests.   HISTORY: Active and dismissed (including expired) requests.
    * @opt_param string pageToken A token identifying the page of results to
    * return.
    * @opt_param int pageSize Requested page size.
