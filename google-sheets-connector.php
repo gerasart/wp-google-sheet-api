@@ -1,7 +1,7 @@
 <?php
 /*
 * Plugin Name: Google Sheets Connector
-* Version: 5.4
+* Version: 1.3
 * Plugin URI: https://svitsoft.com/
 * Description: developer plugin.
 * Author: Svitsoft
@@ -65,9 +65,14 @@ class GoogleSheetsConnector {
 new GoogleSheetsConnector();
 
 
-//require 'vendor/updater/plugin-update-checker.php';
-//
-//$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker('https://github.com/gerasart/developer-helper/',__FILE__,'developer-helper');
-//$myUpdateChecker->setAuthentication('a283aeca2b507dd9d43b8e5b0cf8f6a3e8be50ad');
-//$myUpdateChecker->setBranch('master');
-//$myUpdateChecker->getVcsApi()->enableReleaseAssets();
+require 'vendor/yahnis-elsts/plugin-update-checker/plugin-update-checker.php';
+
+
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+    'https://github.com/gerasart/wp-google-sheet-api.git/',
+    __FILE__,
+    'wp-google-sheet-api'
+);
+$myUpdateChecker->setAuthentication('6539d3f6b6df3db249de160e713aaa5301d80262');
+$myUpdateChecker->setBranch('master');
+$myUpdateChecker->getVcsApi()->enableReleaseAssets();
