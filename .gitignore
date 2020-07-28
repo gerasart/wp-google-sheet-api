@@ -1,0 +1,38 @@
+# Core______________________________________
+/wp-app/wp-content/themes/twentyseventeen/
+/wp-app/wp-content/themes/twentyfifteen/
+/wp-app/wp-content/themes/twentysixteen/
+/wp-app/wp-content/plugins/akismet/
+/wp-app/wp-content/plugins/hello.php
+/wp-app/wp-content/uploads/cache/
+/wp-app/wp-content/uploads/wc-logs/
+
+# Theme______________________________________
+
+# Node.js Tools
+node_modules/
+package-lock.json
+
+# NBeans Project. local IDE files
+nbproject/
+
+# JetBrains Rider
+.idea/
+.vscode/
+.sublimepace/
+
+# Composer phar
+/wp-app/wp-content/themes/*/composer.phar
+
+*.cache
+*.ide-wal
+*.ide-shm
+
+markup/dev/_partials/*
+markup/dev/js/main.min.js
+markup/dev/jsdist/app.js
+markup/dev/css/main.css
+markup/dev/css/main.css.map
+markup/dev/*.html
+
+/wp-app/wp-content/uploads/2020/
