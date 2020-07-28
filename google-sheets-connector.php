@@ -69,7 +69,7 @@ require 'vendor/yahnis-elsts/plugin-update-checker/plugin-update-checker.php';
 
 
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://github.com/gerasart/wp-google-sheet-api.git/',
+    'https://github.com/gerasart/wp-google-sheet-api.git',
     __FILE__,
     'wp-google-sheet-api'
 );
