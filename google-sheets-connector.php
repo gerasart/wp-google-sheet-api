@@ -1,7 +1,7 @@
 <?php
 /*
 * Plugin Name: Google Sheets Connector
-* Version: 1.3
+* Version: 1.4
 * Plugin URI: https://svitsoft.com/
 * Description: developer plugin.
 * Author: Svitsoft
