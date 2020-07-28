@@ -3,4 +3,4 @@
 For dev
 
 * npm i 
-* composer install
+* composer update
