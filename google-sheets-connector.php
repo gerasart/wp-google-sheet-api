@@ -71,7 +71,7 @@ require 'vendor/yahnis-elsts/plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
     'https://github.com/gerasart/wp-google-sheet-api.git',
     __FILE__,
-    'wp-google-sheet-api'
+    'google-sheets-connector'
 );
 $myUpdateChecker->setAuthentication('6539d3f6b6df3db249de160e713aaa5301d80262');
 $myUpdateChecker->setBranch('master');
